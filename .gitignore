@@ -1,0 +1,9 @@
+# ignore external modules
+node_modules/*
+# do not ignore rightster modules
+# (temporary, until we can host them separated)
+!node_modules/tplshare
+!node_modules/wrapper
+
+# ignore log files
+npm-debug.log
