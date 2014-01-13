@@ -44,7 +44,7 @@ tplshare.setExtension(app.get('view engine'));
 // login
 app.get('/login', router.login);
 
-app.get('/', router.restrict, router.render)
+app.get('/', router.restrict, router.render);
 app.get('/:route', router.restrict, router.render);
 
 if ('development' === app.get('env')) {
