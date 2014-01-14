@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>{{brand}} - {{title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {{#global.styles}}
+            <link rel="stylesheet" type="text/css" href="{{.}}" media="screen" />
+        {{/global.styles}}
+  <!-- Stylesheets -->
+  <link href="" rel="stylesheet">
+  <link rel="stylesheet" href="style/font-awesome.css">
+  <link href="style/style.css" rel="stylesheet">
+  <link href="style/bootstrap-responsive.css" rel="stylesheet">
+
+        </head>
+    <body>
+        it is the login page
+
+        {{#scripts}}
+            <script src="{{.}}"></script>
+        {{/scripts}}
+        {{! shared (pre-compiled) tempaltes }}
+        <script>
+            var templates = {};
+            {{#templates}}
+            templates['{{key}}'] = new Hogan.Template({{{content}}});
+            {{/templates}}
+        </script>
+
+
+    </body>
+</html>

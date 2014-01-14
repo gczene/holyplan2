@@ -17,7 +17,7 @@ var express = require('express'),
     tplshare = require('tplshare'),
     RedisStore = require('connect-redis')(express),
     flash = require('connect-flash'),
-    router = require('./routes/router');
+    router = require('./routes/router').getRoutes('./routes');
 
 // init application
 var app = express();
@@ -25,7 +25,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', cons.hogan);
 app.set('view engine', 'html');
-// app.locals(config.locals);
+app.locals(config.locals);
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());

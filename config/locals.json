@@ -1,0 +1,15 @@
+{
+    "brand" : "HP",
+    "global" : {
+        "styles" : [
+            "/style/bootstrap.css",
+            "/style/font-awesome.css",
+            "/style/style.css"
+        ],
+        "scripts" : [
+            "//code.jquery.com/jquery-2.0.3.min.js",
+            "/js/bootstrap.js"
+        ]
+
+    }
+}
