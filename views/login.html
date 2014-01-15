@@ -80,6 +80,11 @@
         {{#global.scripts}}
             <script src="{{.}}"></script>
         {{/global.scripts}}
+
+        {{#scripts}}
+            <script src="{{.}}"0></script>
+        {{/scripts}}
+
         {{! shared (pre-compiled) tempaltes }}
         <script>
             var templates = {};

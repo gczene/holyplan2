@@ -5,30 +5,39 @@
 var router = exports,
     fs = require('fs');
 
+/**
+ * ignire these files from stored available routes
+ * @type {Array}
+ */
 router.ignore = [
     'router.js'
 ];
 
+/**
+ * store available routes
+ * @type {Object}
+ */
 router.routes = { };
 
-// router.routes = {
-//     user : require('./user'),
-//     register : require('./register')
-// };
-
+/**
+ * get the available routes from ./routes dir
+ * load it to router.routes
+ *
+ * @param  string   path
+ * @return this
+ */
 router.getRoutes = function (path) {
 
     var files = fs.readdirSync (path);
 
-
-        // console.log(files);
-
-        files.forEach( function ( fileName ) {
-            if ( router.ignore.indexOf(fileName) === -1 ) {
-                var key = fileName.replace(/\.js$/, '');
-                router.routes[ key ] = require('./' + fileName);
-            }
-        });
+        if (Object.keys(router.routes).length === 0){
+            files.forEach( function ( fileName ) {
+                if ( router.ignore.indexOf(fileName) === -1 ) {
+                    var key = fileName.replace(/\.js$/, '');
+                    router.routes[ key ] = require('./' + fileName);
+                }
+            });
+        }
         router.restrict = router.routes.user.restrict;
         router.login    = router.routes.user.login;
 
@@ -36,11 +45,6 @@ router.getRoutes = function (path) {
 };
 
 
-router.test = function (req, res) {
-
-    res.send('ez a test oldal');
-
-};
 
 router.render = function (req, res, next) {
     // router.getRoutes('./routes/', function(err, files){

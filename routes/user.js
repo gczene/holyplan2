@@ -26,6 +26,9 @@ user.restrict = function (req, res, next) {
 
 user.login = function (req, res, next) {
     res.render('login', {
-        title : 'Login'
+        title : 'Login',
+        scripts : [
+            '/js/login.js'
+        ]
     });
 }

@@ -17,6 +17,13 @@
     <body>
         it is the login page
 
+        <!-- global scripts -->
+        {{! global JavaScript files }}
+        {{#global.scripts}}
+            <script src="{{.}}"></script>
+        {{/global.scripts}}
+
+        <!-- local scripts -->
         {{#scripts}}
             <script src="{{.}}"></script>
         {{/scripts}}

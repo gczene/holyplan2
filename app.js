@@ -27,6 +27,7 @@ app.engine('html', cons.hogan);
 app.set('view engine', 'html');
 app.locals(config.locals);
 app.use(express.favicon());
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
@@ -35,7 +36,6 @@ app.use(express.cookieParser(config.session.secret));
 app.use(express.session({ store: new RedisStore(), secret: config.session.secret}));
 app.use(flash());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
 
 // configure template sharing
 tplshare.setPath(app.get('views'));
