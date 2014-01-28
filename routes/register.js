@@ -3,8 +3,20 @@
 'use strict';
 
 
-var reg = exports;
+var reg = exports,
+    tplshare = require('tplshare');
 
 reg.render = function (req, res) {
-    res.send ('It is the reg page');
+    tplshare.get({}, function (err, templates) {
+        if (err) {
+            next(err);
+        }
+        
+        res.render('login', {
+            partials : {
+                view : 'partials/register'
+            },
+            scripts : ['/js/register.js']
+        });      
+    })
 }

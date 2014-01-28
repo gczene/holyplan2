@@ -50,6 +50,7 @@ router.render = function (req, res, next) {
     // router.getRoutes('./routes/', function(err, files){
     //     console.log(files);
     // });
+
     var routeName = req.params.route || 'index',
         route = router.routes[routeName] || null;
 

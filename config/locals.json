@@ -1,5 +1,6 @@
 {
     "brand" : "HP",
+    "url" : "substitue.it",
     "global" : {
         "styles" : [
             "/style/bootstrap.css",

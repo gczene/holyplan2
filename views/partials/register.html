@@ -1,0 +1,98 @@
+<div class="admin-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Widget starts -->
+                <div class="widget wred">
+                    <div class="widget-head">
+                        <i class="icon-lock"></i> Register
+                    </div>
+                    <div class="widget-content">
+                        <div class="padd">
+                            <form method="post" id="register">
+                                <fieldset>
+                                    <legend>Your company's details</legend>
+                                    <div class="form-group">
+                                        <label for="company">Company name</label>
+                                        <input type="text" class="required input-lg form-control" id="company"
+                                        name="Register[company]"
+                                        placeholder="Company" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="website">Website</label>
+                                        <input data-toggle="tooltip" data-original-title="Starts with http:// or https://"
+                                        type="text" class="required input-lg form-control"
+                                        id="website" name="Register[website]" placeholder="http:// or https://" />
+                                        <span class="help-block">
+                                            It must start with http:// or https:// !
+                                        </span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subdomain">Sudomain</label>
+                                        <input type="text" class="required input-lg form-control" id="subdomain"
+                                        name="Register[subdomain]" placeholder="Choose a subdomain" />
+                                        <span class="help-block">
+                                            After registration your subdomain will be created at once. You can visit the page at
+                                            http://<b>choosedsubdomain</b>.{{url}}
+                                        </span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="allowedDomains">Allowed domains</label>
+                                        <input type="text" class="form-control input-lg" id="allowedDomains"
+                                        name="Register[allowedDomains]" placeholder="domain1.com, domain2.com, etc." />
+                                        <span class="help-block">If your company use more than one domain for emails (e.g. <i>domain.co, domain.org, etc</i>) specify them here <i>separated by commas</i>. <br /><b>Your email's domain added by default.</b></span>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Your details</legend>
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" class="required input-lg form-control" id="firstName"
+                                        name="Register[firstName]" placeholder="First Name" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="required input-lg form-control" id="lastName"
+                                        name="Register[lastName]" placeholder="Last Name" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="required input-lg form-control" id="email"
+                                        name="Register[email]" placeholder="E-mail" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="required input-lg form-control" id="password"
+                                        name="Register[password]" placeholder="Password" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password2">Password again</label>
+                                        <input type="password" class="required input-lg form-control" id="password2"
+                                        name="Register[password2]" placeholder="Password again" />
+                                    </div>
+                                    <!-- Accept box and button s-->
+                                    <div class="form-group">
+                                        <div class="col-lg-9 col-lg-offset-3">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input class="required" name="Register[terms]" type="checkbox" value="1" /> Accept Terms &amp; Conditions
+                                                </label>
+                                            </div>
+                                            <div class="alert alert-danger hidden">Please accept T&C</div>
+                                            <br />
+                                            <button type="submit" class="btn btn-danger">Register</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        Already Registred? <a href="login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

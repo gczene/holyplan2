@@ -2,7 +2,8 @@
 
 'use strict';
 
-var user = exports;
+var user = exports,
+    tplshare = require('tplshare');
 
 user.render = function (req, res) {
 
@@ -25,10 +26,17 @@ user.restrict = function (req, res, next) {
 };
 
 user.login = function (req, res, next) {
-    res.render('login', {
-        title : 'Login',
-        scripts : [
-            '/js/login.js'
-        ]
+
+    tplshare.get({}, function (err, templates) {
+        res.render('login', {
+            title : 'Login',
+            partials : {
+                view : 'partials/login'
+            },
+            scripts : [
+                '/js/login.js'
+            ]
+        });
+        
     });
 }
