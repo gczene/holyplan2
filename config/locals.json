@@ -9,7 +9,12 @@
         ],
         "scripts" : [
             "//code.jquery.com/jquery-2.0.3.min.js",
-            "/js/bootstrap.js"
+            "/js/bootstrap.js",
+            "/js/libs/spine/spine.js",
+            "/js/libs/spine/local.js",
+            "/js/libs/spine/route.js",
+            "/js/libs/spine/ajax.js",
+            "/js/libs/spine/spine.validate.js"
         ]
 
     }

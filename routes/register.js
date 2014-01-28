@@ -11,12 +11,12 @@ reg.render = function (req, res) {
         if (err) {
             next(err);
         }
-        
+
         res.render('login', {
             partials : {
                 view : 'partials/register'
             },
-            scripts : ['/js/register.js']
-        });      
+            scripts : ['/js/spine-register.js']
+        });
     })
 }
